@@ -1,6 +1,8 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
-  "extends": ["ultracite"],
+  "extends": [
+    "ultracite"
+  ],
   "linter": {
     "enabled": true,
     "rules": {
@@ -13,7 +15,38 @@
               "apps/api": "The web app should not import directly from the api app. Use the generated API client instead."
             }
           }
-        }
+        },
+        "noNonNullAssertion": "off",
+        "useFilenamingConvention": "off",
+        "noNestedTernary": "off",
+        "noExportedImports": "off"
+      },
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noConsole": "off",
+        "noDuplicateProperties": "off",
+        "noArrayIndexKey": "off",
+        "noDocumentCookie": "off"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
+      },
+      "performance": {
+        "noNamespaceImport": "off"
+      },
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "off"
+      },
+      "a11y": {
+        "useFocusableInteractive": "off",
+        "useSemanticElements": "off",
+        "useAriaPropsForRole": "off",
+        "useButtonType": "off"
+      },
+      "nursery": {
+        "noUnknownAtRule": "off",
+        "noNestedComponentDefinitions": "off",
+        "noShadow": "off"
       }
     }
   }

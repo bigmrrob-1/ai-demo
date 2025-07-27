@@ -1,5 +1,5 @@
+import type { UIComponentProps } from '@/types/ui';
 import { formatText } from '@/utils/helpers';
-import { UIComponentProps } from '@/types/ui';
 
 export function AliasTest({ className, children }: UIComponentProps) {
   const formattedClass = className ? formatText(className) : '';
