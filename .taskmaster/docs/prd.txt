@@ -1,0 +1,1 @@
+Launch the V1 of the Kicks AI platform. We need a database to store trends and concepts, an API to serve them, and a UI to display them as concept cards.

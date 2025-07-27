@@ -20,6 +20,7 @@
     "@biomejs/biome": "2.1.2",
     "@types/better-sqlite3": "^7.6.13",
     "@vitest/ui": "^3.2.4",
+    "axios": "^1.11.0",
     "drizzle-kit": "^0.31.4",
     "happy-dom": "^18.0.1",
     "husky": "^9.1.7",
@@ -39,6 +40,7 @@
   },
   "dependencies": {
     "better-sqlite3": "^12.2.0",
+    "convex": "^1.25.4",
     "drizzle-orm": "^0.44.3",
     "effect": "^3.17.2"
   }

@@ -1,0 +1,49 @@
+# Convex AI Rules
+
+## Database Schema Design
+- Use `defineTable` to create tables with proper validation
+- Always include indexes for frequently queried fields
+- Use `v.id("tableName")` for foreign key relationships
+- Keep schemas normalized but practical
+
+## Query and Mutation Patterns
+- Use `query` for read operations (automatic caching)
+- Use `mutation` for write operations (real-time sync)
+- Use `action` for side effects and external API calls
+- Always validate input with `v.object()` schemas
+
+## Type Safety
+- Use TypeScript for all Convex functions
+- Leverage generated types from schema
+- Use proper return type annotations
+- Avoid `any` types
+
+## Performance Best Practices
+- Use indexes for all filtered queries
+- Paginate large result sets
+- Use `db.query().withIndex()` for complex queries
+- Minimize document reads in mutations
+
+## Security
+- Always validate user input
+- Use Convex auth for user management
+- Implement proper authorization checks
+- Never trust client-side data
+
+## Real-time Features
+- Use `useQuery` hook for reactive data
+- Implement optimistic updates for mutations
+- Handle loading and error states gracefully
+- Use Convex's built-in real-time sync
+
+## Testing
+- Write unit tests for all functions
+- Use Convex's testing utilities
+- Test both happy paths and error cases
+- Mock external dependencies
+
+## Deployment
+- Use `npx convex dev` for local development
+- Use `npx convex deploy` for production
+- Set environment variables for configuration
+- Monitor with Convex dashboard

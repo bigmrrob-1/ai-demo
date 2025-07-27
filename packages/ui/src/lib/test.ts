@@ -1,1 +1,1 @@
-export const uiTest = () => "UI package path alias working!";
+export const uiTest = () => 'UI package path alias working!';

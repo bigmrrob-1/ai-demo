@@ -5,22 +5,16 @@
     "enabled": true,
     "rules": {
       "recommended": true,
-      "suspicious": {
+      "style": {
         "noRestrictedImports": {
           "level": "error",
           "options": {
-            "paths": [
-              {
-                "name": "apps/api",
-                "message": "The web app should not import directly from the api app. Use the generated API client instead."
-              }
-            ]
+            "paths": {
+              "apps/api": "The web app should not import directly from the api app. Use the generated API client instead."
+            }
           }
         }
       }
     }
-  },
-  "organizeImports": {
-    "enabled": true
   }
 }
