@@ -1,0 +1,45 @@
+{
+  "name": "ai-sandbox",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "db:generate": "turbo run db:generate",
+    "db:push": "turbo run db:push",
+    "db:seed": "turbo run db:seed",
+    "codegen": "turbo run codegen",
+    "check-types": "turbo run check-types",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.1.2",
+    "@types/better-sqlite3": "^7.6.13",
+    "@vitest/ui": "^3.2.4",
+    "drizzle-kit": "^0.31.4",
+    "happy-dom": "^18.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "turbo": "^2.5.5",
+    "typescript": "5.8.3",
+    "ultracite": "5.1.1",
+    "vitest": "^3.2.4"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "biome check --write --no-errors-on-unmatched",
+    "*.{json,jsonc}": "biome format --write --no-errors-on-unmatched"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.2.0",
+    "drizzle-orm": "^0.44.3",
+    "effect": "^3.17.2"
+  }
+}

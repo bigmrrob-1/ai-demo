@@ -1,0 +1,64 @@
+# This file maps repository paths to specialized AI agents.
+# The Orchestrator agent uses this as a routing table to delegate tasks.
+
+# ===================================================================
+# Application-Specific Ownership
+# ===================================================================
+
+# The Next.js web front-end is handled by the UI specialist agent.
+/apps/web/                                  @ui-agent
+
+# The API backend is handled by the API specialist agent.
+/apps/api/                                  @api-agent
+
+# The documentation site has its own specialist.
+/apps/docs/                                 @docs-agent
+
+# ===================================================================
+# Shared Package Ownership
+# ===================================================================
+
+# The shared React component library is owned by the UI agent.
+/packages/ui/                               @ui-agent
+
+# The database schema and queries are owned by the data agent.
+/packages/db/                               @data-agent
+
+# ESLint configurations are handled by the code-quality agent.
+/packages/eslint-config/                    @code-quality-agent
+
+# TypeScript configurations are handled by the typescript specialist.
+/packages/typescript-config/                @typescript-agent
+
+# ===================================================================
+# Documentation & Configuration
+# ===================================================================
+
+# All high-level documentation is handled by the technical writer agent.
+/docs/                                      @docs-writer
+*.md                                        @docs-writer
+
+# Agent configurations are meta-tasks handled by the main orchestrator.
+/.opencode/                                 @orchestrator-agent
+
+# CI/CD workflows are handled by a dedicated DevOps agent.
+/.github/workflows/                         @devops-agent
+
+# The root package.json and turbo.json are critical; require the orchestrator.
+/package.json                               @orchestrator-agent
+/turbo.json                                 @orchestrator-agent
+/pnpm-workspace.yaml                        @orchestrator-agent
+
+# ===================================================================
+# Tools & Scripts
+# ===================================================================
+
+# Scaffolding tools are handled by the tooling specialist.
+/tools/scaffolding/                         @tooling-agent
+
+# ===================================================================
+# Default Ownership
+# ===================================================================
+
+# Any file not explicitly owned above is handled by the general-purpose coder.
+*                                           @general-coder

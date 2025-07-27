@@ -1,0 +1,26 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+  "extends": ["ultracite"],
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noRestrictedImports": {
+          "level": "error",
+          "options": {
+            "paths": [
+              {
+                "name": "apps/api",
+                "message": "The web app should not import directly from the api app. Use the generated API client instead."
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "organizeImports": {
+    "enabled": true
+  }
+}

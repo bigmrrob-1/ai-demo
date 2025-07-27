@@ -1,0 +1,7 @@
+packages:
+  # all packages in subdirs of packages/
+  - 'packages/*'
+  # all apps in subdirs of apps/
+  - 'apps/*'
+  # all tools in subdirs of tools/
+  - 'tools/*'
